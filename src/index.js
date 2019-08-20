@@ -1,35 +1,14 @@
-import React, { Fragment } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
+import { StatusBar } from 'react-native';
 
-import Todo from './components/Todo';
+import './config/ReactotronConfig';
+import Routes from './routes';
 
-const App = () => {
+export default function App() {
   return (
     <>
-      <View style={styles.sectionContainer}>
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-      </View>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <Routes />
     </>
   );
-};
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
-
-export default App;
+}
